@@ -50,6 +50,8 @@ In addition, two more CSV data sources have been created:
 
 These data sources have been developed to enhance the readability and accessibility of the data.
 
+
+
 ## Ideas for Apps
 
 - **Interactive Visualizations**: Utilize `dcupl` to interact with the budget data through dynamic charts and graphs, allowing users to drill down into specific categories of spending and revenue.
