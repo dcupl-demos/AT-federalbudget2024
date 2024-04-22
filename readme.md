@@ -50,6 +50,22 @@ In addition, two more CSV data sources have been created:
 
 These data sources have been developed to enhance the readability and accessibility of the data.
 
+## Models & Transformers
+The following models were auto-generated in the initial phase and subsequently enhanced. Aggregates, references, and meta descriptions have been defined. Additionally, the project includes a transformer.
+
+### Models
+**/dcupl/models/budget.dcupl.json**
+Model Budget: This model incorporates the original properties from the BMF data, references to scope (Aufgabenbereich) and subdivision (Untergliederung), and introduces a new property "Differenz," created by the "difference transformer".
+
+**/dcupl/models/scope.dcupl.json**
+Model Scope: A self-generated model that includes all scopes (Aufgabenbereiche).
+
+**/dcupl/models/subdivision.dcupl.json**
+Model Subdivision: A self-generated model that encompasses all subdivisions (Untergliederungen).
+
+### Transformers
+**/dcupl/transformers/difference.transformer.js**
+This transformer generates a new property "Differenz" by calculating the difference between BVA 2024 and BVA 2023.
 
 
 ## Ideas for Apps
