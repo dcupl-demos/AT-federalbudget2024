@@ -57,6 +57,8 @@ The following models were auto-generated in the initial phase and subsequently e
 **/dcupl/models/budget.dcupl.json**
 Model Budget: This model incorporates the original properties from the BMF data, references to scope (Aufgabenbereich) and subdivision (Untergliederung), and introduces a new property "Differenz," created by the "difference transformer".
 
+Three sections were created for this model, which group the data at the level of scopes (Aufgabenbereiche), subdivisions (Untergliederungen) and accounts (Konten) and form aggregates for the properties "BVA 2024", "BVA 2023", "Erfolg 2022" and "Differenz".
+
 **/dcupl/models/scope.dcupl.json**
 Model Scope: A self-generated model that includes all scopes (Aufgabenbereiche).
 
