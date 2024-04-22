@@ -1,0 +1,14 @@
+{
+  "name": "dcupl-starter",
+  "version": "0.0.0",
+  "description": "",
+  "scripts": {
+    "serve": "npx dcupl serve"
+  },
+  "repository": {},
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@dcupl/cli": "^1.2.0"
+  }
+}

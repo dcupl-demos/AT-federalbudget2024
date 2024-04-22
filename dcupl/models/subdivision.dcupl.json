@@ -1,0 +1,27 @@
+{
+  "key": "Subdivision",
+  "keyProperty": "UG",
+  "meta": {
+    "name": "Model Subdivision",
+    "description": "Bezeichnungen der Untergliederungen lt. https://www.data.gv.at/katalog/dataset/bundesbudget-verzeichnis-veranschlagter-konten-2024#resources"
+  },
+  "references": [],
+  "properties": [
+    {
+      "key": "UG",
+      "type": "string",
+      "meta": {
+        "name": "UG",
+        "description": "Untergliederung"
+      }
+    },
+    {
+      "key": "title",
+      "type": "string",
+      "meta": {
+        "name": "Title",
+        "description": "Bezeichnung der Untergliederung"
+      }
+    }
+  ]
+}

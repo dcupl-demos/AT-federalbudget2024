@@ -1,0 +1,169 @@
+{
+  "key": "Budget",
+  "autoGenerateKey": true,
+  "meta": {
+    "name": "Model Budget",
+    "description": "Bundesbudget - Verzeichnis veranschlagter Konten 2024; https://www.data.gv.at/katalog/dataset/bundesbudget-verzeichnis-veranschlagter-konten-2024"
+  },
+  "references": [
+    {
+      "key": "AB",
+      "type": "singleValued",
+      "model": "Scope"
+    },
+    {
+      "key": "UG",
+      "type": "singleValued",
+      "model": "Subdivision"
+    }
+  ],
+  "properties": [
+    {
+      "key": "EV/FV",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "EV/FV",
+        "description": "Ergebnisvoranschlag/Finanzierungsvoranschlag"
+      }
+    },
+    {
+      "key": "JAHR",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "Jahr",
+        "description": "Jahr des Bundesfinanzgesetzes"
+      }
+    },
+    {
+      "key": "Untergliederung",
+      "type": "string",
+      "filter": true,
+      "derive": {
+        "localReference": "UG",
+        "remoteProperty": "title"
+      },
+      "meta": {
+        "name": "Untergliederung",
+        "description": "Bezeichnung der Untergliederung"
+      }
+    },
+    {
+      "key": "GB",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "GB",
+        "description": "Globalbudget"
+      }
+    },
+    {
+      "key": "DB1",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "DB1",
+        "description": "Detailbudget 1. Ebene"
+      }
+    },
+    {
+      "key": "DB2",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "DB2",
+        "description": "Detailbudget 2. Ebene"
+      }
+    },
+    {
+      "key": "HH",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "HH",
+        "description": "Haushaltshinweis (1 = Aufwendung/Auszahlung, 2 = Ertrag/Einzahlung)"
+      }
+    },
+    {
+      "key": "KONTO",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "KONTO",
+        "description": "Kontonummer"
+      }
+    },
+    {
+      "key": "Aufgabenbereichbezeichnung",
+      "type": "string",
+      "filter": true,
+      "derive": {
+        "localReference": "AB",
+        "remoteProperty": "title"
+      },
+      "meta": {
+        "name": "Aufgabenbereichbezeichnung",
+        "description": "Bezeichnung des Aufgabenbereichs"
+      }
+    },
+    {
+      "key": "TEXT_KONTO",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "TEXT_KONTO",
+        "description": "Kontentext"
+      }
+    },
+    {
+      "key": "TEXT_VASTELLE",
+      "type": "string",
+      "filter": true,
+      "meta": {
+        "name": "TEXT_VASTELLE",
+        "description": "Voranschlagsstellentext"
+      }
+    },
+    {
+      "key": "BVA 2024",
+      "type": "float",
+      "filter": true,
+      "aggregate": true,
+      "meta": {
+        "name": "BVA 2024",
+        "description": "Bundesvoranschlag 2024"
+      }
+    },
+    {
+      "key": "BVA 2023",
+      "type": "float",
+      "filter": true,
+      "aggregate": true,
+      "meta": {
+        "name": "BVA 2023",
+        "description": "Bundesvoranschlag 2023"
+      }
+    },
+    {
+      "key": "Erfolg 2022",
+      "type": "float",
+      "filter": true,
+      "aggregate": true,
+      "meta": {
+        "name": "Erfolg 2022",
+        "description": "Erfolg 2022"
+      }
+    },
+    {
+      "key": "Differenz",
+      "type": "float",
+      "filter": false,
+      "aggregate": true,
+      "meta": {
+        "name": "Differenz",
+        "description": "Differenz BVA 2024 - BVA 2023"
+      }
+    }
+  ]
+}

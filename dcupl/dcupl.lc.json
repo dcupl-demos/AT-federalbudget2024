@@ -1,0 +1,51 @@
+{
+  "applications": [
+    {
+      "key": "default",
+      "name": "AT federal budget 2024 - all data",
+      "description": "Complete data set of the Austrian federal budget 2024; 62349 data records",
+      "resourceTags": ["budget2024","ext-data","transformer"]
+    }
+  ],
+  "resources": [
+    {
+      "url": "${baseUrl}/models/budget.dcupl.json",
+      "type": "model",
+      "tags": ["budget2024"]
+    },
+    {
+      "url": "${baseUrl}/data/Bund_Verzeichnis_veranschlagter_Konten_2024_mit_PA_und_GF.csv",
+      "type": "data",
+      "model": "Budget",
+      "tags": ["budget2024","data"]
+    },
+    {
+      "type": "transformer",
+      "url": "${baseUrl}/transformers/difference.transformer.js",
+      "applyTo": ["data"],
+      "tags": ["transformer"]
+    },
+    {
+      "url": "${baseUrl}/models/scope.dcupl.json",
+      "type": "model",
+      "tags": ["ext-data"]
+    },
+    {
+      "url": "${baseUrl}/data/Aufgabenbereich.csv",
+      "type": "data",
+      "model": "Scope",
+      "tags": ["ext-data"]
+    },
+    {
+      "url": "${baseUrl}/models/subdivision.dcupl.json",
+      "type": "model",
+      "tags": ["ext-data"]
+    },
+    {
+      "url": "${baseUrl}/data/Untergliederung.csv",
+      "type": "data",
+      "model": "Subdivision",
+      "tags": ["ext-data"]
+    }
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "key": "Scope",
+  "keyProperty": "AB",
+  "meta": {
+    "name": "Model Scope",
+    "description": "Bezeichnungen der Aufgabenbereiche lt. BD | Budgetdienst – Lesehilfe zu den Budgetunterlagen 2024"
+  },
+  "references": [],
+  "properties": [
+    {
+      "key": "AB",
+      "type": "string",
+      "meta": {
+        "name": "AB",
+        "description": "Aufgabenbereich"
+      }
+    },
+    {
+      "key": "title",
+      "type": "string",
+      "meta": {
+        "name": "Title",
+        "description": "Bezeichnung des Aufgabenbereichs"
+      }
+    }
+  ]
+}
